@@ -164,13 +164,14 @@ def evaluate(
     output_file: Optional[str] = None,
     gguf_file: Optional[str] = None,
     execute_tests: Optional[str] = 'no',
-    test_ids_only: Optional[str] = 'no',
+    all_ids_dict: str = None,
+    split: str = 'all',
     **model_kwargs,
 ):
     assert execute_tests.lower() in ["yes", "no"], "execute_tests must be either 'yes' or 'no'"
-    assert test_ids_only.lower() in ["yes", "no"], "test_ids_only must be either 'yes' or 'no'"
-    if test_ids_only.lower() == "yes":
-        ids_to_keep = json.load(open("/evo/homes/crupig/empirical_rankers_hq/constants/ids_train_val_test.json"))["Evalplus"]["test"]
+    
+    if split!= "all" and all_ids_dict is not None:
+        ids_to_keep = json.load(open(all_ids_dict))['Evalplus'][split] if split != "all" else None
         model_kwargs["ids_subset"] = ids_to_keep
         
     if model_kwargs and samples is None:
