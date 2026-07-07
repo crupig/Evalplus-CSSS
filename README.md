@@ -6,11 +6,11 @@ This repo was created as a support generation tool for the work **"How Should We
 * create virtual environment;
 * install `requirements.txt` (designed to work on Python `3.12`)
 
+### Code generation:
+
 **Replace scripts**:
 
 Replace all the scripts in `scripts_to_replace` in the `.venv/lib/python3.12/site-packages/evalplus` path.
-
-### Code generation:
 
 ```bash run_gen.sh <DEVICE_ID> <MODEL_PATH>```
 
