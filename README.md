@@ -16,7 +16,7 @@ The original code generation framework has been modified in order to:
 
 **Replace scripts**:
 
-Replace all the scripts in `scripts_to_replace` in the `.venv/lib/python3.12/site-packages/evalplus` path.
+Replace all the scripts in `scripts_to_replace` in the `.venv/lib/python3.12/site-packages/evalplus` path. The relative path of each script is reported in the first line of the script itself.
 
 ```bash run_gen.sh <DEVICE_ID> <MODEL_PATH>```
 
@@ -35,7 +35,7 @@ Example of command to run the scripts (input file as argument):
 
 **Replace scripts**:
 
-Replace all the scripts in `scripts_to_replace_testcases` in the `.venv/lib/python3.12/site-packages/evalplus` path.
+Replace all the scripts in `scripts_to_replace_testcases` in the `.venv/lib/python3.12/site-packages/evalplus` path. The relative path of each script is reported in the first line of the script itself.
 
 ```bash run_gen_tests.sh <DEVICE_ID> <MODEL_PATH>```
 
